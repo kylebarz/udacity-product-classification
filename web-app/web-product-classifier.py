@@ -5,10 +5,11 @@ from torchvision import models,transforms
 import numpy as np
 from PIL import Image
 import io
-import face_recognition
+#import face_recognition
 import cv2
-import face_recognition
+#import face_recognition
 from torch import nn
+
 def face_detector(img):
     
     faces = face_recognition.face_locations(img)
@@ -121,4 +122,5 @@ def upload_file():
         return jsonify('This pic doesn\'t have a human face or a dog')
 
 if __name__ == '__main__':
-    app.run(debug=False,port=os.getenv('PORT',5000))
+#    app.run(debug=False,port=os.getenv('PORT',5000))
+    app.run(debug=False)
